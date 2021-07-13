@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
+    "noImplicitAny": false, // 不需要显式的声明变量的类型any
+    "target": "es5", // 编译后的js版本
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true, // 允许混合编译js文件
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true, // 允许使用commonjs的方式import默认文件
+    // "esModuleInterop": false,  // import * as React form 'react'
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "module": "esnext", // 配置的是我们代码的模块系统，Node.js的CommonJS、es6标准的esnext、requireJS的AMD
+    "moduleResolution": "node", // 决定了我们编译器的工作方式
+    "resolveJsonModule": true, // 允许引用json模块
+    "isolatedModules": true, // 编译器会将每个文件作为单独模块使用
+    "noEmit": true, // 表示当发生错误的时候，编译器不要生成js代码
+    "jsx": "react-jsx", // 允许编译器支持编译react代码
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
