@@ -23,6 +23,6 @@
       }
     ]
   },
-  "include": ["src"],
+  "include": ["src", "src/index.tsx"],
   "exclude": ["node_modules"]
 }
