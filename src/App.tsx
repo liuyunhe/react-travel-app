@@ -5,7 +5,8 @@ import {
   Footer,
   SideMenu,
   Carousel,
-  ProductCollection
+  ProductCollection,
+  BusinessPartners
 } from './components'
 import { Row, Col, Typography } from 'antd'
 import { productList1, productList2, productList3 } from './mockups'
@@ -20,9 +21,11 @@ const App: React.FC = () => {
       {/* 页面内容 */}
       <div className={styles['page-content']}>
         <Row style={{ marginTop: 20 }}>
+          {/* 菜单 */}
           <Col span={6}>
             <SideMenu />
           </Col>
+          {/* 轮播图 */}
           <Col span={18}>
             <Carousel />
           </Col>
@@ -37,6 +40,7 @@ const App: React.FC = () => {
           sideImage={sideImage1}
           products={productList1}
         />
+        {/* 新品上市 */}
         <ProductCollection
           title={
             <Typography.Title level={3} type="danger">
@@ -46,6 +50,7 @@ const App: React.FC = () => {
           sideImage={sideImage2}
           products={productList2}
         />
+        {/* 国内游推荐 */}
         <ProductCollection
           title={
             <Typography.Title level={3} type="success">
@@ -55,6 +60,8 @@ const App: React.FC = () => {
           sideImage={sideImage3}
           products={productList3}
         />
+        {/* 合作企业 */}
+        <BusinessPartners />
       </div>
       <Footer />
     </div>
