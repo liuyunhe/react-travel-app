@@ -19,43 +19,54 @@ import sideImage3 from '../../assets/images/sider_2019_02-04-2.png'
 import styles from './HomePage.module.css'
 import { withTranslation, WithTranslation } from 'react-i18next'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import { RootState } from '../../redux/store'
+import { Dispatch } from 'redux'
+import {
+  fetchRecommendProductFailActionCreator,
+  fetchRecommendProductStartActionCreator,
+  fetchRecommendProductSuccessActionCreator
+} from '../../redux/recommendProducts/recommendProductsActions'
 
-interface State {
-  loading: boolean
-  error: string | null
-  productList: any[]
+const mapStateToProps = (state: RootState) => {
+  return {
+    loading: state.recommendProducts.loading,
+    error: state.recommendProducts.error,
+    productList: state.recommendProducts.productList
+  }
 }
 
-class HomePageComponent extends React.Component<WithTranslation, State> {
-  constructor(props) {
-    super(props)
-    this.state = {
-      loading: true,
-      error: null,
-      productList: []
+const mapDispatchToProps = (dispatch: Dispatch) => {
+  return {
+    fetchStart: () => {
+      dispatch(fetchRecommendProductStartActionCreator())
+    },
+    fetchSuccess: (data) => {
+      dispatch(fetchRecommendProductSuccessActionCreator(data))
+    },
+    fetchError: (e) => {
+      dispatch(fetchRecommendProductFailActionCreator(e))
     }
   }
+}
 
+type PropsType = WithTranslation &
+  ReturnType<typeof mapStateToProps> &
+  ReturnType<typeof mapDispatchToProps>
+
+class HomePageComponent extends React.Component<PropsType> {
   async componentDidMount() {
+    this.props.fetchStart()
     try {
       const { data } = await axios.get('/api/productCollections')
-      this.setState({
-        loading: false,
-        error: null,
-        productList: data
-      })
+      this.props.fetchSuccess(data)
     } catch (error) {
-      this.setState({
-        loading: false,
-        error: null,
-        productList: [productList1, productList2, productList3]
-      })
+      this.props.fetchSuccess([productList1, productList2, productList3])
     }
   }
 
   render() {
-    const { t } = this.props
-    const { productList, loading, error } = this.state
+    const { t, productList, error, loading } = this.props
 
     if (loading) {
       return (
@@ -128,4 +139,7 @@ class HomePageComponent extends React.Component<WithTranslation, State> {
   }
 }
 
-export const HomePage = withTranslation()(HomePageComponent)
+export const HomePage = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withTranslation()(HomePageComponent))
