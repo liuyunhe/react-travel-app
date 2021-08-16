@@ -1753,61 +1753,6 @@
     "@svgr/plugin-svgo" "^5.5.0"
     "loader-utils" "^2.0.0"
 
-"@swc/core-android-arm64@^1.2.63":
-  "integrity" "sha1-4SzhlNxAZsg2GXXrfSIUHETZSAQ="
-  "resolved" "https://registry.nlark.com/@swc/core-android-arm64/download/@swc/core-android-arm64-1.2.63.tgz?cache=0&sync_timestamp=1625551484282&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40swc%2Fcore-android-arm64%2Fdownload%2F%40swc%2Fcore-android-arm64-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-darwin-arm64@^1.2.63":
-  "integrity" "sha1-A5UX7CkSp5fWyYSOZmvhKxvGQ2o="
-  "resolved" "https://registry.nlark.com/@swc/core-darwin-arm64/download/@swc/core-darwin-arm64-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-darwin-x64@^1.2.63":
-  "integrity" "sha1-cUAyo4rJ25NQDqfOQUZ5cwbLi38="
-  "resolved" "https://registry.nlark.com/@swc/core-darwin-x64/download/@swc/core-darwin-x64-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-freebsd-x64@^1.2.63":
-  "integrity" "sha1-ePqF5XneyfOiFWZPadE1E9cJq4U="
-  "resolved" "https://registry.nlark.com/@swc/core-freebsd-x64/download/@swc/core-freebsd-x64-1.2.63.tgz?cache=0&sync_timestamp=1625551491472&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40swc%2Fcore-freebsd-x64%2Fdownload%2F%40swc%2Fcore-freebsd-x64-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-linux-arm-gnueabihf@^1.2.63":
-  "integrity" "sha1-zLI89wUDCph+r2amUMBDL1luwPM="
-  "resolved" "https://registry.nlark.com/@swc/core-linux-arm-gnueabihf/download/@swc/core-linux-arm-gnueabihf-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-linux-arm64-gnu@^1.2.63":
-  "integrity" "sha1-zALTnYfwRQPgoopPInOxx0bVs+M="
-  "resolved" "https://registry.nlark.com/@swc/core-linux-arm64-gnu/download/@swc/core-linux-arm64-gnu-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-linux-arm64-musl@^1.2.63":
-  "integrity" "sha1-VMPFGt3DG9tNcs9ViCxkmon9eGk="
-  "resolved" "https://registry.nlark.com/@swc/core-linux-arm64-musl/download/@swc/core-linux-arm64-musl-1.2.63.tgz?cache=0&sync_timestamp=1625551680688&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40swc%2Fcore-linux-arm64-musl%2Fdownload%2F%40swc%2Fcore-linux-arm64-musl-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-linux-x64-gnu@^1.2.63":
-  "integrity" "sha1-QDGy1J+N8UYYeklOvJPAzGCrovE="
-  "resolved" "https://registry.nlark.com/@swc/core-linux-x64-gnu/download/@swc/core-linux-x64-gnu-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-linux-x64-musl@^1.2.63":
-  "integrity" "sha1-uDtXCKRY76rs/aG8mtgPmxN08I0="
-  "resolved" "https://registry.nlark.com/@swc/core-linux-x64-musl/download/@swc/core-linux-x64-musl-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-win32-arm64-msvc@^1.2.63":
-  "integrity" "sha1-JwQPOPRgN1sWWjX+m1dfQQLXLDU="
-  "resolved" "https://registry.nlark.com/@swc/core-win32-arm64-msvc/download/@swc/core-win32-arm64-msvc-1.2.63.tgz?cache=0&sync_timestamp=1625551683278&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40swc%2Fcore-win32-arm64-msvc%2Fdownload%2F%40swc%2Fcore-win32-arm64-msvc-1.2.63.tgz"
-  "version" "1.2.63"
-
-"@swc/core-win32-ia32-msvc@^1.2.63":
-  "integrity" "sha1-l6bt9aVXU3Pqz5PWwZDsc1jMUrQ="
-  "resolved" "https://registry.nlark.com/@swc/core-win32-ia32-msvc/download/@swc/core-win32-ia32-msvc-1.2.63.tgz"
-  "version" "1.2.63"
-
 "@swc/core-win32-x64-msvc@^1.2.63":
   "integrity" "sha1-1gqyK/v3phLCbXgrpYO4UvpzWIQ="
   "resolved" "https://registry.nlark.com/@swc/core-win32-x64-msvc/download/@swc/core-win32-x64-msvc-1.2.63.tgz"
@@ -1995,6 +1940,13 @@
   "integrity" "sha1-aTsxatMj6pfu1rOO0aPMArFnK1c="
   "resolved" "https://registry.nlark.com/@types/html-minifier-terser/download/@types/html-minifier-terser-5.1.2.tgz"
   "version" "5.1.2"
+
+"@types/http-proxy@^1.17.5":
+  "integrity" "sha1-MOqFzCyGg2g1Kjfw0NNYHiSDTG8="
+  "resolved" "https://registry.nlark.com/@types/http-proxy/download/@types/http-proxy-1.17.7.tgz"
+  "version" "1.17.7"
+  dependencies:
+    "@types/node" "*"
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   "integrity" "sha1-S6jdtyAiH0MuRDvV+RF/0iz9R2I="
@@ -2881,6 +2833,13 @@
   "integrity" "sha1-fOWniZ1Pzgi8DR2WA8QdxLi3DtQ="
   "resolved" "https://registry.nlark.com/axe-core/download/axe-core-4.3.0.tgz"
   "version" "4.3.0"
+
+"axios@^0.21.1":
+  "integrity" "sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg="
+  "resolved" "https://registry.npm.taobao.org/axios/download/axios-0.21.1.tgz?cache=0&sync_timestamp=1608611400719&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.21.1.tgz"
+  "version" "0.21.1"
+  dependencies:
+    "follow-redirects" "^1.10.0"
 
 "axobject-query@^2.2.0":
   "integrity" "sha1-lD1H4QwLcEqkInXiDt83ImSJib4="
@@ -4519,7 +4478,7 @@
 
 "define-property@^2.0.2":
   "integrity" "sha1-1Flono1lS6d+AqgX+HENcCyxbp0="
-  "resolved" "https://registry.npm.taobao.org/define-property/download/define-property-2.0.2.tgz"
+  "resolved" "https://registry.nlark.com/define-property/download/define-property-2.0.2.tgz"
   "version" "2.0.2"
   dependencies:
     "is-descriptor" "^1.0.2"
@@ -5380,7 +5339,7 @@
 
 "extend-shallow@^3.0.2":
   "integrity" "sha1-Jqcarwc7OfshJxcnRhMcJwQCjbg="
-  "resolved" "https://registry.npm.taobao.org/extend-shallow/download/extend-shallow-3.0.2.tgz"
+  "resolved" "https://registry.nlark.com/extend-shallow/download/extend-shallow-3.0.2.tgz"
   "version" "3.0.2"
   dependencies:
     "assign-symbols" "^1.0.0"
@@ -5573,7 +5532,7 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
-"follow-redirects@^1.0.0":
+"follow-redirects@^1.0.0", "follow-redirects@^1.10.0":
   "integrity" "sha1-2RFN7Qoc/dM04WTmZirQK/2R/0M="
   "resolved" "https://registry.nlark.com/follow-redirects/download/follow-redirects-1.14.1.tgz?cache=0&sync_timestamp=1620555702886&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.14.1.tgz"
   "version" "1.14.1"
@@ -5679,11 +5638,6 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npm.taobao.org/fs.realpath/download/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
-
-"fsevents@^1.2.7", "fsevents@^2.1.2", "fsevents@^2.1.3", "fsevents@~2.3.2":
-  "integrity" "sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro="
-  "resolved" "https://registry.npm.taobao.org/fsevents/download/fsevents-2.3.2.tgz?cache=0&sync_timestamp=1612536609287&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffsevents%2Fdownload%2Ffsevents-2.3.2.tgz"
-  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0="
@@ -6131,7 +6085,18 @@
     "agent-base" "6"
     "debug" "4"
 
-"http-proxy-middleware@^0.19.1", "http-proxy-middleware@0.19.1":
+"http-proxy-middleware@^2.0.1":
+  "integrity" "sha1-fvNBekeft2ZqVx4Jlmxmo5vSwV8="
+  "resolved" "https://registry.nlark.com/http-proxy-middleware/download/http-proxy-middleware-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "@types/http-proxy" "^1.17.5"
+    "http-proxy" "^1.18.1"
+    "is-glob" "^4.0.1"
+    "is-plain-obj" "^3.0.0"
+    "micromatch" "^4.0.2"
+
+"http-proxy-middleware@0.19.1":
   "integrity" "sha1-GDx9xKoUeRUDBkmMIQza+WCApDo="
   "resolved" "https://registry.nlark.com/http-proxy-middleware/download/http-proxy-middleware-0.19.1.tgz"
   "version" "0.19.1"
@@ -6141,7 +6106,7 @@
     "lodash" "^4.17.11"
     "micromatch" "^3.1.10"
 
-"http-proxy@^1.17.0":
+"http-proxy@^1.17.0", "http-proxy@^1.18.1":
   "integrity" "sha1-QBVB8FNIhLv5UmAzTnL4juOXZUk="
   "resolved" "https://registry.npm.taobao.org/http-proxy/download/http-proxy-1.18.1.tgz"
   "version" "1.18.1"
@@ -6168,7 +6133,7 @@
   "resolved" "https://registry.nlark.com/human-signals/download/human-signals-1.1.1.tgz?cache=0&sync_timestamp=1624364612113&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fhuman-signals%2Fdownload%2Fhuman-signals-1.1.1.tgz"
   "version" "1.1.1"
 
-"i18next@>= 19.0.0":
+"i18next@^20.4.0", "i18next@>= 19.0.0":
   "integrity" "sha1-aJcimniY4j88SIXxAxXJeLWU07k="
   "resolved" "https://registry.nlark.com/i18next/download/i18next-20.4.0.tgz?cache=0&sync_timestamp=1628587892572&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fi18next%2Fdownload%2Fi18next-20.4.0.tgz"
   "version" "20.4.0"
@@ -6634,6 +6599,11 @@
   "integrity" "sha1-caUMhCnfync8kqOQpKA7OfzVHT4="
   "resolved" "https://registry.npm.taobao.org/is-plain-obj/download/is-plain-obj-1.1.0.tgz"
   "version" "1.1.0"
+
+"is-plain-obj@^3.0.0":
+  "integrity" "sha1-r28uoUrFpkYYOlu9tbqrvBVq2dc="
+  "resolved" "https://registry.nlark.com/is-plain-obj/download/is-plain-obj-3.0.0.tgz"
+  "version" "3.0.0"
 
 "is-plain-object@^2.0.3", "is-plain-object@^2.0.4":
   "integrity" "sha1-LBY7P6+xtgbZ0Xko8FwqHDjgdnc="
@@ -7789,7 +7759,7 @@
 
 "micromatch@^3.1.10":
   "integrity" "sha1-cIWbyVyYQJUvNZoGij/En57PrCM="
-  "resolved" "https://registry.npm.taobao.org/micromatch/download/micromatch-3.1.10.tgz?cache=0&sync_timestamp=1618055113916&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmicromatch%2Fdownload%2Fmicromatch-3.1.10.tgz"
+  "resolved" "https://registry.nlark.com/micromatch/download/micromatch-3.1.10.tgz"
   "version" "3.1.10"
   dependencies:
     "arr-diff" "^4.0.0"
