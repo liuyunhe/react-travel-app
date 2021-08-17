@@ -8,24 +8,25 @@ import {
   BusinessPartners
 } from '../../components'
 import { Row, Col, Typography, Spin } from 'antd'
-import {
-  productList1,
-  productList2,
-  productList3
-} from '../../pages/home/mockups'
+// import {
+//   productList1,
+//   productList2,
+//   productList3
+// } from '../../pages/home/mockups'
 import sideImage1 from '../../assets/images/sider_2019_12-09.png'
 import sideImage2 from '../../assets/images/sider_2019_02-04.png'
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png'
 import styles from './HomePage.module.css'
 import { withTranslation, WithTranslation } from 'react-i18next'
-import axios from 'axios'
+// import axios from 'axios'
 import { connect } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { Dispatch } from 'redux'
 import {
   fetchRecommendProductFailActionCreator,
   fetchRecommendProductStartActionCreator,
-  fetchRecommendProductSuccessActionCreator
+  fetchRecommendProductSuccessActionCreator,
+  giveMeDataActionCreator
 } from '../../redux/recommendProducts/recommendProductsActions'
 
 const mapStateToProps = (state: RootState) => {
@@ -36,16 +37,19 @@ const mapStateToProps = (state: RootState) => {
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    fetchStart: () => {
-      dispatch(fetchRecommendProductStartActionCreator())
-    },
-    fetchSuccess: (data) => {
-      dispatch(fetchRecommendProductSuccessActionCreator(data))
-    },
-    fetchError: (e) => {
-      dispatch(fetchRecommendProductFailActionCreator(e))
+    // fetchStart: () => {
+    //   dispatch(fetchRecommendProductStartActionCreator())
+    // },
+    // fetchSuccess: (data) => {
+    //   dispatch(fetchRecommendProductSuccessActionCreator(data))
+    // },
+    // fetchError: (e) => {
+    //   dispatch(fetchRecommendProductFailActionCreator(e))
+    // },
+    giveMeData: () => {
+      dispatch(giveMeDataActionCreator())
     }
   }
 }
@@ -55,14 +59,15 @@ type PropsType = WithTranslation &
   ReturnType<typeof mapDispatchToProps>
 
 class HomePageComponent extends React.Component<PropsType> {
-  async componentDidMount() {
-    this.props.fetchStart()
-    try {
-      const { data } = await axios.get('/api/productCollections')
-      this.props.fetchSuccess(data)
-    } catch (error) {
-      this.props.fetchSuccess([productList1, productList2, productList3])
-    }
+  componentDidMount() {
+    // this.props.fetchStart()
+    // try {
+    //   const { data } = await axios.get('/api/productCollections')
+    //   this.props.fetchSuccess(data)
+    // } catch (error) {
+    //   this.props.fetchSuccess([productList1, productList2, productList3])
+    // }
+    this.props.giveMeData()
   }
 
   render() {

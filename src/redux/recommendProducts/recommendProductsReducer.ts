@@ -16,6 +16,7 @@ const defaultState: RecommendProductsState = {
   error: null
 }
 
+// reducer是纯函数，不可以处理副作用
 const recommendProductsReducer = (
   state = defaultState,
   action: RecommendProductAction
