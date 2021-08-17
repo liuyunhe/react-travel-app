@@ -10389,6 +10389,11 @@
     "indent-string" "^4.0.0"
     "strip-indent" "^3.0.0"
 
+"redux-thunk@^2.3.0":
+  "integrity" "sha1-UcLBmhhe1Rh6qpotCLZm0NZGdiI="
+  "resolved" "https://registry.npm.taobao.org/redux-thunk/download/redux-thunk-2.3.0.tgz"
+  "version" "2.3.0"
+
 "redux@^4.0.0", "redux@^4.1.1":
   "integrity" "sha1-dvHEObtCBD+YX72b8hmQ5gvWf0c="
   "resolved" "https://registry.nlark.com/redux/download/redux-4.1.1.tgz"
