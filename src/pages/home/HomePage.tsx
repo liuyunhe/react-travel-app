@@ -21,11 +21,11 @@ import { withTranslation, WithTranslation } from 'react-i18next'
 // import axios from 'axios'
 import { connect } from 'react-redux'
 import { RootState } from '../../redux/store'
-import { Dispatch } from 'redux'
+// import { Dispatch } from 'redux'
 import {
-  fetchRecommendProductFailActionCreator,
-  fetchRecommendProductStartActionCreator,
-  fetchRecommendProductSuccessActionCreator,
+  // fetchRecommendProductFailActionCreator,
+  // fetchRecommendProductStartActionCreator,
+  // fetchRecommendProductSuccessActionCreator,
   giveMeDataActionCreator
 } from '../../redux/recommendProducts/recommendProductsActions'
 
