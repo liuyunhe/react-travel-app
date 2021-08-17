@@ -1,4 +1,4 @@
-import i18n from 'i18next'
+// import i18n from 'i18next'
 import {
   CHANGE_LANGUAGE,
   ADD_LANGUAGE,
@@ -22,7 +22,7 @@ const defaultState: languageState = {
 const languageReducer = (state = defaultState, action: LanguageActionTypes) => {
   switch (action.type) {
     case CHANGE_LANGUAGE:
-      i18n.changeLanguage(action.payload) // 这样处理是不标准的，有副作用
+      // i18n.changeLanguage(action.payload) // 这样处理是不标准的，有副作用
       return { ...state, language: action.payload }
     case ADD_LANGUAGE:
       return {
