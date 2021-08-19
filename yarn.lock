@@ -1600,6 +1600,16 @@
     "schema-utils" "^2.6.5"
     "source-map" "^0.7.3"
 
+"@reduxjs/toolkit@^1.6.1":
+  "integrity" "sha1-e8g7RzUqZjvyjbAeedF7pUuYrek="
+  "resolved" "https://registry.nlark.com/@reduxjs/toolkit/download/@reduxjs/toolkit-1.6.1.tgz"
+  "version" "1.6.1"
+  dependencies:
+    "immer" "^9.0.1"
+    "redux" "^4.1.0"
+    "redux-thunk" "^2.3.0"
+    "reselect" "^4.0.0"
+
 "@rollup/plugin-node-resolve@^7.1.1":
   "integrity" "sha1-gN44Tt+9e/yRARZJEPhgeBUaPso="
   "resolved" "https://registry.nlark.com/@rollup/plugin-node-resolve/download/@rollup/plugin-node-resolve-7.1.3.tgz"
@@ -6198,6 +6208,11 @@
   "resolved" "https://registry.nlark.com/image-size/download/image-size-0.5.5.tgz"
   "version" "0.5.5"
 
+"immer@^9.0.1":
+  "integrity" "sha1-pxVPNP5wZPFfAFVMyUxmzAv0U+w="
+  "resolved" "https://registry.nlark.com/immer/download/immer-9.0.5.tgz"
+  "version" "9.0.5"
+
 "immer@8.0.1":
   "integrity" "sha1-nHPbaD4rOXXEJPsFcq9YiYd65lY="
   "resolved" "https://registry.nlark.com/immer/download/immer-8.0.1.tgz"
@@ -10171,7 +10186,7 @@
   "resolved" "https://registry.nlark.com/react-is/download/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-redux@^7.2.4":
+"react-redux@^7.2.1", "react-redux@^7.2.4":
   "integrity" "sha1-HrtHQDK3LYBt4uBRnNB3YeIi4iU="
   "resolved" "https://registry.nlark.com/react-redux/download/react-redux-7.2.4.tgz"
   "version" "7.2.4"
@@ -10283,7 +10298,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.9.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.14.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.9.0", "react@17.0.2":
   "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
   "resolved" "https://registry.nlark.com/react/download/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -10394,7 +10409,7 @@
   "resolved" "https://registry.npm.taobao.org/redux-thunk/download/redux-thunk-2.3.0.tgz"
   "version" "2.3.0"
 
-"redux@^4.0.0", "redux@^4.1.1":
+"redux@^4.0.0", "redux@^4.1.0", "redux@^4.1.1":
   "integrity" "sha1-dvHEObtCBD+YX72b8hmQ5gvWf0c="
   "resolved" "https://registry.nlark.com/redux/download/redux-4.1.1.tgz"
   "version" "4.1.1"
@@ -10530,6 +10545,11 @@
   "integrity" "sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8="
   "resolved" "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz"
   "version" "1.0.0"
+
+"reselect@^4.0.0":
+  "integrity" "sha1-8lKYMOXT0OAhQIskaiBu9OpEN/c="
+  "resolved" "https://registry.nlark.com/reselect/download/reselect-4.0.0.tgz"
+  "version" "4.0.0"
 
 "reserved-words@^0.1.2":
   "integrity" "sha1-AKCUD5jNUBrqqsMWQR2a3FKzGrE="
