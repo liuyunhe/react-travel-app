@@ -3,7 +3,6 @@ import React, {
   // useState
 } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom'
-import axios from 'axios'
 import {
   Anchor,
   Col,
@@ -17,7 +16,10 @@ import {
 import styles from './DetailPage.module.css'
 import { Header, Footer, ProductIntro, ProductComments } from '../../components'
 import { commentMockData } from './mockup'
-import { productDetailSlice } from '../../redux/productDetail/slice'
+import {
+  // productDetailSlice,
+  getProductDetail
+} from '../../redux/productDetail/slice'
 import { useSelector } from '../../redux/hooks'
 import { useDispatch } from 'react-redux'
 const { RangePicker } = DatePicker
@@ -37,28 +39,13 @@ export const DetailPage: React.FC<RouteComponentProps<MatchParams>> = () =>
     const loading = useSelector((state) => state.productDetail.loading)
     const error = useSelector((state) => state.productDetail.error)
     const product = useSelector((state) => state.productDetail.data)
-
     const dispatch = useDispatch()
+
     useEffect(() => {
-      const fetchData = async () => {
-        // setLoading(true)
-        dispatch(productDetailSlice.actions.fetchStart())
-        try {
-          const { data } = await axios.get(
-            `/api/touristRoutes/${touristRouteId}`
-          )
-          // setProduct(data)
-          // setLoading(false)
-          dispatch(productDetailSlice.actions.fetchSuccess(data))
-        } catch (e) {
-          // setError(e.message)
-          // setLoading(false)
-          dispatch(productDetailSlice.actions.fetchFail(e.message))
-        }
-      }
-      fetchData()
+      dispatch(getProductDetail(touristRouteId))
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
     if (loading) {
       return (
         <Spin
