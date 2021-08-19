@@ -17,7 +17,7 @@ import styles from './DetailPage.module.css'
 import { Header, Footer, ProductIntro, ProductComments } from '../../components'
 import { commentMockData } from './mockup'
 import {
-  // productDetailSlice,
+  productDetailSlice,
   getProductDetail
 } from '../../redux/productDetail/slice'
 import { useSelector } from '../../redux/hooks'
@@ -43,6 +43,7 @@ export const DetailPage: React.FC<RouteComponentProps<MatchParams>> = () =>
 
     useEffect(() => {
       dispatch(getProductDetail(touristRouteId))
+      // dispatch(productDetailSlice.actions.fetchStart())
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
