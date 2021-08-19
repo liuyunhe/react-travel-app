@@ -17,7 +17,7 @@ import styles from './DetailPage.module.css'
 import { Header, Footer, ProductIntro, ProductComments } from '../../components'
 import { commentMockData } from './mockup'
 import {
-  productDetailSlice,
+  // productDetailSlice,
   getProductDetail
 } from '../../redux/productDetail/slice'
 import { useSelector } from '../../redux/hooks'
