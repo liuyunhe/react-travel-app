@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Header, Footer, FilterArea, ProductList } from '../../components'
+import { FilterArea, ProductList } from '../../components'
 import { MainLayout } from '../../layout/mainLayout'
 import styles from './SearchPage.module.css'
 import { useParams } from 'react-router'
