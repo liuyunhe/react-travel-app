@@ -1,7 +1,5 @@
 import React from 'react'
 import {
-  Header,
-  Footer,
   SideMenu,
   Carousel,
   ProductCollection,
@@ -16,7 +14,6 @@ import { Row, Col, Typography, Spin } from 'antd'
 import sideImage1 from '../../assets/images/sider_2019_12-09.png'
 import sideImage2 from '../../assets/images/sider_2019_02-04.png'
 import sideImage3 from '../../assets/images/sider_2019_02-04-2.png'
-import styles from './HomePage.module.css'
 import { withTranslation, WithTranslation } from 'react-i18next'
 // import axios from 'axios'
 import { connect } from 'react-redux'
@@ -28,6 +25,7 @@ import {
   // fetchRecommendProductSuccessActionCreator,
   giveMeDataActionCreator
 } from '../../redux/recommendProducts/recommendProductsActions'
+import { MainLayout } from '../../layout/mainLayout'
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -91,55 +89,50 @@ class HomePageComponent extends React.Component<PropsType> {
       return <div>网站出错：{error}</div>
     }
     return (
-      <>
-        <Header />
-        {/* 页面内容 */}
-        <div className={styles['page-content']}>
-          <Row style={{ marginTop: 20 }}>
-            {/* 菜单 */}
-            <Col span={6}>
-              <SideMenu />
-            </Col>
-            {/* 轮播图 */}
-            <Col span={18}>
-              <Carousel />
-            </Col>
-          </Row>
-          {/* 爆款推荐 */}
-          <ProductCollection
-            title={
-              <Typography.Title level={3} type="warning">
-                {t('home_page.hot_recommended')}
-              </Typography.Title>
-            }
-            sideImage={sideImage1}
-            products={productList[0]}
-          />
-          {/* 新品上市 */}
-          <ProductCollection
-            title={
-              <Typography.Title level={3} type="danger">
-                {t('home_page.new_arrival')}
-              </Typography.Title>
-            }
-            sideImage={sideImage2}
-            products={productList[1]}
-          />
-          {/* 国内游推荐 */}
-          <ProductCollection
-            title={
-              <Typography.Title level={3} type="success">
-                {t('home_page.domestic_travel')}
-              </Typography.Title>
-            }
-            sideImage={sideImage3}
-            products={productList[2]}
-          />
-          {/* 合作企业 */}
-          <BusinessPartners />
-        </div>
-        <Footer />
-      </>
+      <MainLayout>
+        <Row style={{ marginTop: 20 }}>
+          {/* 菜单 */}
+          <Col span={6}>
+            <SideMenu />
+          </Col>
+          {/* 轮播图 */}
+          <Col span={18}>
+            <Carousel />
+          </Col>
+        </Row>
+        {/* 爆款推荐 */}
+        <ProductCollection
+          title={
+            <Typography.Title level={3} type="warning">
+              {t('home_page.hot_recommended')}
+            </Typography.Title>
+          }
+          sideImage={sideImage1}
+          products={productList[0]}
+        />
+        {/* 新品上市 */}
+        <ProductCollection
+          title={
+            <Typography.Title level={3} type="danger">
+              {t('home_page.new_arrival')}
+            </Typography.Title>
+          }
+          sideImage={sideImage2}
+          products={productList[1]}
+        />
+        {/* 国内游推荐 */}
+        <ProductCollection
+          title={
+            <Typography.Title level={3} type="success">
+              {t('home_page.domestic_travel')}
+            </Typography.Title>
+          }
+          sideImage={sideImage3}
+          products={productList[2]}
+        />
+        {/* 合作企业 */}
+        <BusinessPartners />
+      </MainLayout>
     )
   }
 }
