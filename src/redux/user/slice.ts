@@ -48,6 +48,11 @@ export const userSlice = createSlice({
       // const ddd = action.payload
       state.loading = false
       state.error = action.payload
+    },
+    logout: (state) => {
+      state.token = null
+      state.loading = false
+      state.error = null
     }
   },
   extraReducers: {
