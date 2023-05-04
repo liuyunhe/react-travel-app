@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { FilterArea, ProductList } from '../../components'
 import { MainLayout } from '../../layout/mainLayout'
 import styles from './SearchPage.module.css'
-import { useParams } from 'react-router'
+import { useParams, RouteComponentProps } from 'react-router'
 import { Spin } from 'antd'
 import { searchProduct } from '../../redux/productSearch/slice'
 import { useSelector } from '../../redux/hooks'
@@ -13,7 +13,7 @@ interface MatchParams {
   keywords: string
 }
 
-export const SearchPage: React.FC = () => {
+export const SearchPage: React.FC<RouteComponentProps<MatchParams>> = () => {
   const { keywords } = useParams<MatchParams>()
   const loading = useSelector((state) => state.productSearch.loading)
   const error = useSelector((state) => state.productSearch.error)

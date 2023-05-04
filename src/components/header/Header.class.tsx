@@ -5,7 +5,7 @@ import { Layout, Typography, Input, Menu, Button, Dropdown } from 'antd'
 import { GlobalOutlined } from '@ant-design/icons'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { RootState } from '../../redux/store'
-// import store from '../../redux/store'
+import store from '../../redux/store'
 // import { languageState } from '../../redux/language/languageReducer'
 import {
   addLanguageActionCreator,
