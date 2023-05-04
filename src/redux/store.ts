@@ -10,6 +10,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
+// 登录持久化
 const persistConfig = {
   key: 'root', // 命名空间
   storage,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   user: userSlice.reducer
 })
 
+// 创建持久化reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // const store = createStore(
@@ -41,6 +43,7 @@ const store = configureStore({
   devTools: true
 })
 
+// 创建持久化store
 const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof store.getState>
