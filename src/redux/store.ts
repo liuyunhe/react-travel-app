@@ -5,6 +5,7 @@ import recommendProductsReducer from './recommendProducts/recommendProductsReduc
 import { actionLog, changeLanguage } from './middlewares'
 import { productDetailSlice } from './productDetail/slice'
 import { productSearchSlice } from './productSearch/slice'
+import { shoppingCartSlice } from './shoppingCart/slice'
 import { userSlice } from './user/slice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
   recommendProducts: recommendProductsReducer,
   productDetail: productDetailSlice.reducer,
   productSearch: productSearchSlice.reducer,
-  user: userSlice.reducer
+  user: userSlice.reducer,
+  shoppingCart: shoppingCartSlice.reducer
 })
 
 // 创建持久化reducer
