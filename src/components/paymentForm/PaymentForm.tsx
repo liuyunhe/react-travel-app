@@ -1,31 +1,31 @@
-import React from "react";
-import Cards from "react-credit-cards";
-import "react-credit-cards/es/styles-compiled.css";
-import { Input } from "antd";
-import styles from "./PaymentForm.module.css";
+import React from 'react'
+import Cards from 'react-credit-cards'
+import 'react-credit-cards/es/styles-compiled.css'
+import { Input } from 'antd'
+import styles from './PaymentForm.module.css'
 
 export class PaymentForm extends React.Component {
   state = {
-    cvc: "",
-    expiry: "",
-    focus: "",
-    name: "",
-    number: "",
-  };
+    cvc: '',
+    expiry: '',
+    focus: '',
+    name: '',
+    number: ''
+  }
 
   handleInputFocus = (e) => {
-    this.setState({ focus: e.target.name });
-  };
+    this.setState({ focus: e.target.name })
+  }
 
   handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
 
-    this.setState({ [name]: value });
-  };
+    this.setState({ [name]: value })
+  }
 
   render() {
     return (
-      <div id="PaymentForm" style={{marginTop: 50}}>
+      <div id="PaymentForm" style={{ marginTop: 50 }}>
         <Cards
           cvc={this.state.cvc}
           expiry={this.state.expiry}
@@ -33,7 +33,7 @@ export class PaymentForm extends React.Component {
           name={this.state.name}
           number={this.state.number}
         />
-        <form className={styles["payment-form"]}>
+        <form className={styles['payment-form']}>
           <Input
             type="tel"
             name="number"
@@ -43,6 +43,6 @@ export class PaymentForm extends React.Component {
           />
         </form>
       </div>
-    );
+    )
   }
 }
