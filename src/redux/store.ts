@@ -7,6 +7,7 @@ import { productDetailSlice } from './productDetail/slice'
 import { productSearchSlice } from './productSearch/slice'
 import { shoppingCartSlice } from './shoppingCart/slice'
 import { userSlice } from './user/slice'
+import { orderSlice } from './order/slice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
@@ -24,7 +25,7 @@ const rootReducer = combineReducers({
   productDetail: productDetailSlice.reducer,
   productSearch: productSearchSlice.reducer,
   user: userSlice.reducer,
-  shoppingCart: shoppingCartSlice.reducer
+  order: orderSlice.reducer
 })
 
 // 创建持久化reducer
