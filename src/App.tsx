@@ -7,7 +7,8 @@ import {
   RegisterPage,
   SignInPage,
   SearchPage,
-  ShoppingCartPage
+  ShoppingCartPage,
+  PlaceOrderPage
 } from './pages'
 import { useSelector } from './redux/hooks'
 
@@ -39,6 +40,11 @@ const App: React.FC = () => {
             isAuthenticated={jwt !== null}
             path="/shoppingCart"
             component={ShoppingCartPage}
+          />
+          <PrivateRoute
+            isAuthenticated={jwt !== null}
+            path="/placeOrder"
+            component={PlaceOrderPage}
           />
           <Route render={() => <h1>404 not found,页面去火星了</h1>}></Route>
         </Switch>
