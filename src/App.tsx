@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './App.module.css'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 import {
@@ -11,6 +11,8 @@ import {
   PlaceOrderPage
 } from './pages'
 import { useSelector } from './redux/hooks'
+import { useDispatch } from 'react-redux'
+import { getShoppingCart } from './redux/shoppingCart/slice'
 
 const PrivateRoute = ({ component, isAuthenticated, ...rest }) => {
   const routeComponent = (props) => {
@@ -25,6 +27,13 @@ const PrivateRoute = ({ component, isAuthenticated, ...rest }) => {
 
 const App: React.FC = () => {
   const jwt = useSelector((state) => state.user.token)
+  const disptch = useDispatch()
+  useEffect(() => {
+    if (jwt) {
+      disptch(getShoppingCart(jwt))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [jwt])
   return (
     <div className={styles.App}>
       <BrowserRouter>
