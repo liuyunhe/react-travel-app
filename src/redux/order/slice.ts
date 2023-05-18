@@ -50,6 +50,7 @@ export const orderSlice = createSlice({
       state.loading = false
       state.error = action.payload
     },
+    // 在调用shoppingCartSlice中的checkout时，将返回的订单信息保存在currentOrder
     [checkout.pending.type]: (state) => {
       state.loading = true
     },
