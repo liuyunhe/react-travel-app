@@ -107,8 +107,6 @@ export const shoppingCartSlice = createSlice({
   // promise life action
   extraReducers: {
     [getShoppingCart.pending.type]: (state) => {
-      // return { ...state, loading: true }
-      // immer
       state.loading = true
     },
     [getShoppingCart.fulfilled.type]: (state, action) => {
@@ -120,13 +118,10 @@ export const shoppingCartSlice = createSlice({
       state,
       action: PayloadAction<string | null>
     ) => {
-      // const ddd = action.payload
       state.loading = false
       state.error = action.payload
     },
     [addShoppingCartItem.pending.type]: (state) => {
-      // return { ...state, loading: true }
-      // immer
       state.loading = true
     },
     [addShoppingCartItem.fulfilled.type]: (state, action) => {
@@ -138,13 +133,10 @@ export const shoppingCartSlice = createSlice({
       state,
       action: PayloadAction<string | null>
     ) => {
-      // const ddd = action.payload
       state.loading = false
       state.error = action.payload
     },
     [clearShoppingCartItem.pending.type]: (state) => {
-      // return { ...state, loading: true }
-      // immer
       state.loading = true
     },
     [clearShoppingCartItem.fulfilled.type]: (state, action) => {
@@ -156,13 +148,10 @@ export const shoppingCartSlice = createSlice({
       state,
       action: PayloadAction<string | null>
     ) => {
-      // const ddd = action.payload
       state.loading = false
       state.error = action.payload
     },
     [checkout.pending.type]: (state) => {
-      // return { ...state, loading: true }
-      // immer
       state.loading = true
     },
     [checkout.fulfilled.type]: (state, action) => {
@@ -171,7 +160,6 @@ export const shoppingCartSlice = createSlice({
       state.error = null
     },
     [checkout.rejected.type]: (state, action: PayloadAction<string | null>) => {
-      // const ddd = action.payload
       state.loading = false
       state.error = action.payload
     }
